@@ -1,0 +1,80 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.form-content {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.home-content {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
+
+section{
+    margin-left: 25%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+nav ul{
+    list-style:none !important;
+}
+
+.inputbox{
+    margin: 10px;
+    padding:auto;
+    left: 0;
+    text-align: left;
+}
+
+.button-pair{
+    margin: 10px;
+    padding:auto;
+    left: 0;
+    text-align: left;
+}
+
+select{
+    width: 50%;
+}
+
+.inputbox input{
+    width: 50%;
+}
+.inputbox textarea{
+    width: 50%;
+}
+
+td{
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+}
+
+.year-header{
+    margin-top: 3px;
+    padding: 13px;
+}
+
+
+.table-content {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
