@@ -1,0 +1,84 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+				initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dynamic Calendar</title>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Calendar</h1>
+    </div>
+    <div class="wrapper">
+        <div class="container-calendar">
+            <div id="right">
+                <h3 id="monthAndYear"></h3>
+                <div class="button-container-calendar">
+                    <button id="previous" onclick="previous()">
+                        ‹
+                    </button>
+                    <div class="go-to">
+                        <select id="month" onchange="jump()">
+                            <option value=0>Jan</option>
+                            <option value=1>Feb</option>
+                            <option value=2>Mar</option>
+                            <option value=3>Apr</option>
+                            <option value=4>May</option>
+                            <option value=5>Jun</option>
+                            <option value=6>Jul</option>
+                            <option value=7>Aug</option>
+                            <option value=8>Sep</option>
+                            <option value=9>Oct</option>
+                            <option value=10>Nov</option>
+                            <option value=11>Dec</option>
+                        </select>
+                        <select id="year" onchange="jump()"></select>
+                    </div>
+                    <button id="next" onclick="next()">
+                        ›
+                    </button>
+                </div>
+                <table class="table-calendar" id="calendar" data-lang="en">
+                    <thead id="thead-month"></thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </div>
+            <div id="right">
+                <div id="event-section">
+                    <h3>Add Event</h3>
+                    <input type="date" id="eventDate" class="event-input">
+                    <input type="text" id="eventTitle" placeholder="Event Title" class="event-input">
+                    <input type="text" id="eventDescription" placeholder="Event Description" class="event-input">
+                    <div class="event-button">
+                        <button id="addEvent" onclick="addEvent()">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div id="reminder-section">
+                    <h3>Reminders</h3>
+                    <ul id="reminderList">
+                        <li data-event-id="1">
+                            <strong>Event Title</strong>
+                            - Event Description on Event Date
+                            <button class="delete-event" onclick="deleteEvent(1)">
+                                Delete
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
