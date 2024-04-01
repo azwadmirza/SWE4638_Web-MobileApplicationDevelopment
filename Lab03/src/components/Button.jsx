@@ -5,17 +5,20 @@ class Button extends React.Component{
         super(props);
     }
 
-    shouldComponentUpdate(nextProps,nextState){
-        if(nextState!==this.state){
-            return true;
+    shouldComponentUpdate(nextProps){
+        const {handleSubmit:currentChange}=this.props;
+        const {handleSubmit:nextChange}=nextProps;
+        if(currentChange===nextChange){
+            return false;
         }
-        return false;
+        return true;
     }
 
     render(){
         console.log("Button rendered");
+        const {handleSubmit}=this.props;
         return (
-            <button onClick={this.props.handleSubmit} type="submit">
+            <button onClick={handleSubmit} type="submit">
                 Submit
             </button>
         );
