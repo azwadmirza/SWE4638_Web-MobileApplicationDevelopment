@@ -1,10 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const QuizQuestions = () => {
-    const quizes=JSON.parse(localStorage.getItem("quiz"));
-    const results=JSON.parse(localStorage.getItem("results"));
+    const [quizes,setQuizes]=useState([]);
+    const [results,setResults]=useState([]);
+
+    useEffect(()=>{
+        const quizes=JSON.parse(localStorage.getItem("quiz"));
+        const results=JSON.parse(localStorage.getItem("results"));
+        setQuizes(quizes);
+        setResults(results);
+    },[])
+    
     return ( 
         <div>
             {quizes.length>0 && quizes.map((quiz,index)=>(

@@ -5,7 +5,11 @@ import { useEffect, useState } from "react";
 import Timer from "./timer";
 
 const QuestionAnswer = ({ id }) => {
-    const quiz = JSON.parse(localStorage.getItem("quiz"))[id];
+    const [quiz,setQuiz]=useState(null);
+    useEffect(()=>{
+        const quiz = JSON.parse(localStorage.getItem("quiz"))[id];
+        setQuiz(quiz);
+    },[])
     const [selectedAnswers, setSelectedAnswers] = useState(Array(quiz.questions.length).fill(null));
     const [submitted, setSubmitted] = useState(false);
     const [score, setScore] = useState(0);
