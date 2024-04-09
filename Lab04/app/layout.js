@@ -13,22 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav><li className="flex gap-6">
-          <ul>
-            <Link href="/">Home</Link>
-          </ul>
-          <ul>
-            <Link href="/about">About</Link>
-          </ul>
-          <ul>
-            <Link href="/blog">Blogs</Link>
-          </ul>
-          <ul>
-            <Link href="/posts">Posts</Link>
-          </ul>
-        </li></nav>
         {children}
-      </body>
+        </body>
     </html>
   );
 }
