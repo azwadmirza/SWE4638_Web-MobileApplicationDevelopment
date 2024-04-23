@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@media (prefers-color-scheme: dark) {
+
+}
+
+body {
+  color: whitesmoke;
+  background-color: #16063B;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
